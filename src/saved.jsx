@@ -22,10 +22,10 @@ const SavedNicknameComponent = () => {
     <div className='flex flex-col h-80  space-y-3'>
 
       {savedNicknames.length > 0 ? (
-        <ul className='bg-lime-500 p-5 text-center rounded-2xl '>
+        <ul className=' p-5 text-center rounded-2xl '>
           {savedNicknames.map((nickname, index) => (
-            <li className=" border-2  border-b-gray-600 p-3 rounded-full text-red-800" key={index}>{nickname}
-            <button className="bg-blue-600 ml-5 p-2 rounded-full" onClick={() => removeItem(index)}>➖</button>
+            <li className=" border-2 bg-lime-500 border-b-gray-600 p-3 rounded-full text-red-800" key={index}>{nickname}
+            <button className="bg-blue-600 ml-2 p-2 rounded-full" onClick={() => removeItem(index)}>➖</button>
 
             </li>
           ))}

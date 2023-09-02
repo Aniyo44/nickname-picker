@@ -5,6 +5,7 @@ const Home=()=>{
   const [nicknameOne, setNicknameOne] = useState('');
   const [nicknameTwo, setNicknameTwo] = useState('');
   const [nicknameThree, setNicknameThree] = useState('');
+
   const { fruits, animals, colors, feelings } = random_stuff;
   function getRandomList() {
     const keys = Object.keys(random_stuff); // Get an array of keys from the object
@@ -59,6 +60,7 @@ const Home=()=>{
       // If no existing items, create a new array with the current item and store it in local storage
       localStorage.setItem('myItems', JSON.stringify([item]));
     }
+
   };
 
 
@@ -107,6 +109,7 @@ const Home=()=>{
 
   </div>
 )}
+
 {!nicknameOne && !nicknameTwo && !nicknameThree && (
   <p className='text-2xl italic font-light mb-5'>generate some nicknames !</p>
 )}
@@ -116,6 +119,7 @@ const Home=()=>{
 
 </div>    
     <div className='flex justify-center mt-5 rounded-3xl bg-orange-600 text-xl p-3' ><button onClick={generateNicknames}>Generate </button></div>
+    
     </div>
     
 
